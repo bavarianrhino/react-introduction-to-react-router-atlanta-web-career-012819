@@ -210,3 +210,20 @@ __pushState()__ within the context of a __React__ app.
 * [Manipulating Browser History](https://developer.mozilla.org/en-US/docs/Web/API/History_API)
 
 <p class='util--hide'>View <a href='https://learn.co/lessons/react-introduction-to-react-router'>React Introduction To React Router</a> on Learn.co and start learning to code for free.</p>
+
+
+
+
+
+* Command Line Commands
+var newState = {
+  goal: "Learn about pushState()"
+};
+
+window.history.pushState(newState, "new state", "new-state");
+// Sets up new state to be rendered at url /new-state
+
+
+window.history.back() // Brings you back to original route
+window.history.forward() // brings you back to the /new-state route and persists the state that we set earlier
+window.histoty.state // renders //{goal: 'Learn about pushState()'}
